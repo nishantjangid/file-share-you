@@ -1,0 +1,643 @@
+{
+	"info": {
+		"_postman_id": "f6846b38-33af-43ec-b67a-d7991c61bbc6",
+		"name": "HTZNetwork",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Verify  Transaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transactionHash\":\"0xc52ad3cea9c8939c610478da7199ad84029c6455c8cadad7d4e81f5cf671329b\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ramlogics.com:9101/verify-transaction/",
+					"protocol": "https",
+					"host": [
+						"ramlogics",
+						"com"
+					],
+					"port": "9101",
+					"path": [
+						"verify-transaction",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Liquidity",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pair\":\"ETH_HTZ\",\r\n    \"symbol\":\"HTZ\",\r\n    \"Hash\":\"0xc52ad3cea9c8939c610478da7199ad84029c6455c8cadad7d4e81f5cf671329b\",\r\n    \"address\":\"0x2A495BB4B877261a6a6e003a308a5294dD6968Fe\",\r\n    \"address_type\":\"Ethereum\",\r\n    \"amount\":\"3120\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ramlogics.com:9101/add-liquidity/",
+					"protocol": "https",
+					"host": [
+						"ramlogics",
+						"com"
+					],
+					"port": "9101",
+					"path": [
+						"add-liquidity",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Liquidity by User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"address\":\"0xa809414a71d6ca396052b717f70932d0e003a1b8\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ramlogics.com:9101/all-liquidity-by-user",
+					"protocol": "https",
+					"host": [
+						"ramlogics",
+						"com"
+					],
+					"port": "9101",
+					"path": [
+						"all-liquidity-by-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Liquidity",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://ramlogics.com:9101/all-liquidity",
+					"protocol": "https",
+					"host": [
+						"ramlogics",
+						"com"
+					],
+					"port": "9101",
+					"path": [
+						"all-liquidity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All liquidity share by user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"address\":\"0xf25c717b90878af53ced773e77ecf80ee2de8f1e\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ramlogics.com:9101/all-liquidity-share-by-user",
+					"protocol": "https",
+					"host": [
+						"ramlogics",
+						"com"
+					],
+					"port": "9101",
+					"path": [
+						"all-liquidity-share-by-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get liquidity by pair",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pair\":\"ETH_HTZ\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ramlogics.com:9101/all-liquidity-by-pair",
+					"protocol": "https",
+					"host": [
+						"ramlogics",
+						"com"
+					],
+					"port": "9101",
+					"path": [
+						"all-liquidity-by-pair"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Liquidity by user with pair",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"address\":\"0xf50d52481f4e77f3c0d465fbe08eaa3c3ccb233a\",\r\n    \"pair\" : \"BTC_HTZ\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ramlogics.com:9101/all-liquidity-share-by-user-with-pair",
+					"protocol": "https",
+					"host": [
+						"ramlogics",
+						"com"
+					],
+					"port": "9101",
+					"path": [
+						"all-liquidity-share-by-user-with-pair"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Distribute Reward",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pair\" : \"htz_htze\",\r\n    \"addressType\":\"Hertz Network\",\r\n    \"feeAmount\":\"0.25\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ramlogics.com:9101/distribute-rewards",
+					"protocol": "https",
+					"host": [
+						"ramlogics",
+						"com"
+					],
+					"port": "9101",
+					"path": [
+						"distribute-rewards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Swapping fee details",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pair\":\"ETH_ETH\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ramlogics.com:9101/get-swapping-fee-details",
+					"protocol": "https",
+					"host": [
+						"ramlogics",
+						"com"
+					],
+					"port": "9101",
+					"path": [
+						"get-swapping-fee-details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "swapping",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pair\":\"ETH_ETH\",\r\n    \"receiverAddress\":\"0x2a495bb4b877261a6a6e003a308a5294dd6968fe\",\r\n    \"transactionHash\":\"0x4705480f8ba275d3d61c63b4ef8f889420b8af87cbe36944beca04bd07583970\",\r\n    \"senderAddress\":\"0x2a495bb4b877261a6a6e003a308a5294dd6968fe\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ramlogics.com:9101/swapping/",
+					"protocol": "https",
+					"host": [
+						"ramlogics",
+						"com"
+					],
+					"port": "9101",
+					"path": [
+						"swapping",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get liquidity details by user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"address\":\"0x2A495BB4B877261a6a6e003a308a5294dD6968Fe\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ramlogics.com:9101/all-liquidity-details-by-user",
+					"protocol": "https",
+					"host": [
+						"ramlogics",
+						"com"
+					],
+					"port": "9101",
+					"path": [
+						"all-liquidity-details-by-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get liquidity share by pair",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pair\":\"ETH_HTZ\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ramlogics.com:9101/all-liquidity-share-by-pair",
+					"protocol": "https",
+					"host": [
+						"ramlogics",
+						"com"
+					],
+					"port": "9101",
+					"path": [
+						"all-liquidity-share-by-pair"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get liquidity by address type",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"address_type\":\"Ethereum\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ramlogics.com:9101/all-liquidity-share-by-address-type",
+					"protocol": "https",
+					"host": [
+						"ramlogics",
+						"com"
+					],
+					"port": "9101",
+					"path": [
+						"all-liquidity-share-by-address-type"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Pairs",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://ramlogics.com:9101/get-all-pairs",
+					"protocol": "https",
+					"host": [
+						"ramlogics",
+						"com"
+					],
+					"port": "9101",
+					"path": [
+						"get-all-pairs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Swapping Details",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://ramlogics.com:9101/get-swapping-details",
+					"protocol": "https",
+					"host": [
+						"ramlogics",
+						"com"
+					],
+					"port": "9101",
+					"path": [
+						"get-swapping-details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add stacked liquidity",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Loose Liquidity",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pair\" : \"htze_htz\",\r\n    \"address\": \"0xa809414a71d6ca396052b717f70932d0e003a1b8\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ramlogics.com:9101/get-loose-liquidity",
+					"protocol": "https",
+					"host": [
+						"ramlogics",
+						"com"
+					],
+					"port": "9101",
+					"path": [
+						"get-loose-liquidity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Withdraw Liquidity",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"address\" : \"myaccount123\",\r\n    \"pair\" : \"htz_htze\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ramlogics.com:9101/withdraw-liquidity",
+					"protocol": "https",
+					"host": [
+						"ramlogics",
+						"com"
+					],
+					"port": "9101",
+					"path": [
+						"withdraw-liquidity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get active plan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"address\":\"myaccount123\",\r\n    \"pair\" : \"htz_htze\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ramlogics.com:9101/get-all-farms",
+					"protocol": "https",
+					"host": [
+						"ramlogics",
+						"com"
+					],
+					"port": "9101",
+					"path": [
+						"get-all-farms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transactionHash\":\"4c639e03ce871b11ef8b938aff2baa7cbf70228c1e146acb7124853bab8a73e4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ramlogics.com:9101/checkTransactionExists",
+					"protocol": "https",
+					"host": [
+						"ramlogics",
+						"com"
+					],
+					"port": "9101",
+					"path": [
+						"checkTransactionExists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://ramlogics.com:9101/get-swapping-details-by-user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pair\" : \"htze_htz\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ramlogics.com:9101/get-address-types",
+					"protocol": "https",
+					"host": [
+						"ramlogics",
+						"com"
+					],
+					"port": "9101",
+					"path": [
+						"get-address-types"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Matching Symbol",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.hertz-network.com/users/transfer?username=nishantjangid000@gmail.com&token=bp0fi850q0fmrukagcbccj6ggv&account=myaccount123&to=my123account&amount=250&symbol=MTZ",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hertz-network",
+						"com"
+					],
+					"path": [
+						"users",
+						"transfer"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "nishantjangid000@gmail.com"
+						},
+						{
+							"key": "token",
+							"value": "bp0fi850q0fmrukagcbccj6ggv"
+						},
+						{
+							"key": "account",
+							"value": "myaccount123"
+						},
+						{
+							"key": "to",
+							"value": "my123account"
+						},
+						{
+							"key": "amount",
+							"value": "250"
+						},
+						{
+							"key": "symbol",
+							"value": "MTZ"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
